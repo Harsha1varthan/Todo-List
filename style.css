@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --HEADER-COLOR: #011627;
+    --MAIN-COLOR  : #fdfffc;
+    --THIRD-COLOR :  #eef4ed;
+    --FOURTH-COLOR: #bf0603;
+    --FIFTH-COLOR: #415a77;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 0.65fr 1.35fr;
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    display: grid;
+    background-color: var(--HEADER-COLOR);
+    color: #fff;
+    justify-content: center;
+}
+.one__align{
+    display: flex;
+    margin-top: 1rem;
+}
+input[type = "text"]{
+    height: 48px;
+    font-size: 1.5rem;
+    padding: 1em;
+    background-color: var(--THIRD-COLOR);
+    outline: none;
+    flex-grow: 2; 
+}
+input[type = "text"].focus{
+    outline: none;
+}
+.one__align button{
+    
+    height: 50.5px;
+    padding: 1em;
+    background-color: var(--THIRD-COLOR);
+    outline: none;
+
+}
+h1{
+   display: grid;
+   align-items: end;
+}
+main{
+    background-color: var(--MAIN-COLOR);
+}
+#two__align{
+    display: flex;
+    font-size: 0.75rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5em;
+    background-color: var(--FIFTH-COLOR);
+    margin-top: 1rem;
+    color: var(--MAIN-COLOR);
+    font-weight: bold;
+    justify-content: space-between;
+
+}
+#two__align div + div{
+    margin-left: 1rem;
+}
+.count{
+    display: inline-block;
+    background-color: var(--FOURTH-COLOR);
+    font-size: 0.85rem;
+    padding: 0.5em;
+    margin-left: 0.5rem;
+}
+
+.task__li{
+    display: flex;
+    width: 50%;
+    padding: 0.35em;
+    font-size: 1.5rem;
+    background-color: var(--MAIN-COLOR);
+    border: 2px solid var(--HEADER-COLOR);
+    margin: 0 auto;
+    list-style: none;
+    margin-top: 1rem;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.todoList{
+    flex-grow: 1;
+}
+.inputField input[type = "text"]{
+    opacity: 0.9;
+    width: 5%;
+    overflow-x: visible;
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    outline: none;
+    background-color: orange;
+}
+@media (max-width: 760px){
+    .one__align{
+        display: flex;
+        flex-flow: column;
+        
+    }
+    input[type = "text"]{
+       font-size: 1.5rem;
+       padding: 0.25em;
+       height: 20px;
+    }
+    #addTask{
+        padding: 0.25rem;
+    }
+    .task__li{
+        width: 80%;
+        font-size: 1.25rem;
+    }
+    .deleteButton img{
+        height: 10px;
+    }
+    .checkBox img{
+        height: 10px;
+    }
+        
+}
