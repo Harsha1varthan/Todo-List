@@ -114,7 +114,7 @@ main{
     }
     input[type = "text"]{
        font-size: 1.5rem;
-       padding: 0.25em;
+       padding: 1em;
        height: 20px;
     }
     #addTask{
